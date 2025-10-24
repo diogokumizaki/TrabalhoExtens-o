@@ -15,12 +15,12 @@ public class TransactionRequestDTO {
     @NotBlank(message = "O título da transação é obrgatório!")
     private String title;
 
-    @NotBlank(message = "O preço da transação é obrigatório!")
+    @NotBlank(message = "O valor da transação é obrigatório!")
     private float price;
 
-    @NotBlank(message = "Selecionar a categoria é obrigatório!")
-    private UUID categoryid;
+    @NotBlank(message = "A categoria é obrigatória!")
+    private UUID categoryId;
 
-    @NotBlank(message = "Selecionar o cliente é obrigatório!")
-    private UUID userid;
+    @NotBlank(message = "O cliente é obrigatório!")
+    private UUID userId;
 }

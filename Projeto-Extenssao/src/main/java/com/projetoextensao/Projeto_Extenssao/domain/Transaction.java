@@ -1,5 +1,6 @@
 package com.projetoextensao.Projeto_Extenssao.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,9 +24,11 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
+    @JsonBackReference
     private Category category;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonBackReference
     private Client client;
 }

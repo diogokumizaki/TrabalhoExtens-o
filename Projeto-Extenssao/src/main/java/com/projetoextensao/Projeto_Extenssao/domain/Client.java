@@ -44,5 +44,6 @@ public class Client {
     private List<Category> categories = new ArrayList<>();
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Transaction> transactions = new ArrayList<>();
 }
